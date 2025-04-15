@@ -1,0 +1,20 @@
+nuvoton_m55m1.name=NuMaker-M55M1
+nuvoton_m55m1.upload.tool=nulinkburn_m55m1
+nuvoton_m55m1.upload.protocol=nuc-ba
+nuvoton_m55m1.upload.maximum_size=524288
+nuvoton_m55m1.upload.use_1200bps_touch=false
+nuvoton_m55m1.upload.wait_for_upload_port=false
+nuvoton_m55m1.upload.native_usb=false
+nuvoton_m55m1.build.mcu=cortex-m55
+nuvoton_m55m1.build.f_cpu=200000000L
+nuvoton_m55m1.build.core=nuvoton
+nuvoton_m55m1.build.extra_flags=-D__M55M1__ -mthumb -DUSB_PID={build.pid} -DUSB_VID={build.vid} -DUSBCON
+nuvoton_m55m1.build.board=__NUVOTON__
+nuvoton_m55m1.build.ldscript=linker_scripts/gcc/M55M1.ld
+nuvoton_m55m1.build.variant_system_lib=../../system/{build.def}/libchip_M55M1_gcc_rel.a
+nuvoton_m55m1.build.variant=Nuvoton
+nuvoton_m55m1.build.vid=0x2341
+nuvoton_m55m1.build.pid=0x003e
+nuvoton_m55m1.build.def=M55M1
+nuvoton_m55m1.build.openocdscript=openocd_scripts/M55M1.cfg
+

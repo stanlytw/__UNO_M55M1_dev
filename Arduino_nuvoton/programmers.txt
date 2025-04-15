@@ -1,0 +1,9 @@
+nulink.name=NULINK
+nulink.communication=USB
+nulink.protocol=
+nulink.program.protocol=
+nulink.program.tool=openocd
+nulink.program.tool.default=openocd
+nulink.program.extra_params=
+nulink.programmer.protocol=nulink
+nulink.programmer.transport_script={runtime.platform.path}/debugger/select_hla.cfg
