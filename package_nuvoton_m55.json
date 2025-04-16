@@ -5,7 +5,7 @@
                 "online": "http://www.nuvoton.com"
             },
             "maintainer": "Nuvoton",
-            "name":"nuvoton",
+            "name":"nuvoton_m55",
             "platforms": [
                 {
                   "name": "UNO M55M1",
