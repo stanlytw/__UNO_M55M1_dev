@@ -13,9 +13,9 @@
 #CORE=cortex-m23
 
 CHIP=M55M1
-ARM_GCC_TOOLCHAIN=C:/Users/HLLIN6/AppData/Local/Arduino15/packages/arduino/tools/arm-none-eabi-gcc/10-2021q3/bin
-#PROJECT_BASE_PATH=C:/Users/HLLIN6/AppData/Local/Arduino15/packages/nuvoton/hardware/nuvoton/13.1.18/system/$(CHIP)
-PROJECT_BASE_PATH=C:/WORK/Arduino_Port/BSP_Package/__UNO_M55M1_dev/Arduino_nuvoton/system/$(CHIP)
+ARM_GCC_TOOLCHAIN=C:/Users/HLLIN6/AppData/Local/Arduino15/packages/nuvoton_m55/tools/arm-none-eabi-gcc/10-2021q3/bin
+PROJECT_BASE_PATH=C:/Users/HLLIN6/AppData/Local/Arduino15/packages/nuvoton_m55/hardware/nuvoton/1.0.0/system/$(CHIP)
+#PROJECT_BASE_PATH=C:/WORK/Arduino_Port/BSP_Package/__UNO_M55M1_dev/Arduino_nuvoton/system/$(CHIP)
 CORE=cortex-m55
 
 OUTPUT_BIN=./

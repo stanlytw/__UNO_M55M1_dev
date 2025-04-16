@@ -829,7 +829,18 @@ typedef enum IRQn
     The Declaration of Peripheral Pointer
     @{
 */
-
+#if 1
+# define PA       PA_NS
+# define PB       PB_NS
+# define PC       PC_NS
+# define PD       PD_NS
+# define PE       PE_NS
+# define PF       PF_NS
+# define PG       PG_NS
+# define PH       PH_NS
+# define PI       PI_NS
+# define PJ       PJ_NS
+#else
 # define PA       ((__PC() & NS_OFFSET) ? PA_NS : PA_S)
 # define PB       ((__PC() & NS_OFFSET) ? PB_NS : PB_S)
 # define PC       ((__PC() & NS_OFFSET) ? PC_NS : PC_S)
@@ -840,7 +851,7 @@ typedef enum IRQn
 # define PH       ((__PC() & NS_OFFSET) ? PH_NS : PH_S)
 # define PI       ((__PC() & NS_OFFSET) ? PI_NS : PI_S)
 # define PJ       ((__PC() & NS_OFFSET) ? PJ_NS : PJ_S)
-
+#endif
 /* Always Secure peripheral */
 #define CLK       CLK_S
 #define DPM       DPM_S

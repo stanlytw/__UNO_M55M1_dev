@@ -24,7 +24,7 @@ extern "C" {
 /* Macro Definition                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
 #ifndef NVT_DCACHE_ON
-#define NVT_DCACHE_ON       1                   /*!< Set 1 to enable data cache or 0 to disable data cache */
+#define NVT_DCACHE_ON       0                   /*!< Set 1 to enable data cache or 0 to disable data cache */
 #endif
 
 #ifndef DEBUG_PORT
@@ -82,6 +82,7 @@ extern "C" {
 #define NVT_NOINIT                          __attribute__((section(".bss.NoInit")))                 /*!< Placed variables in the UNINIT region          */
 #endif
 
+#if 0
 #define __PC()                                                \
     __extension__({                                           \
         register unsigned int current_pc;                     \
@@ -89,6 +90,7 @@ extern "C" {
         current_pc;                                           \
     })    /*!< Current program counter            */
 
+#endif
 /*----------------------------------------------------------------------------
   Define clocks
  *----------------------------------------------------------------------------*/

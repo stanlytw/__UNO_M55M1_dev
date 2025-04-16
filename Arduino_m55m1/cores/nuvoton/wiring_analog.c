@@ -51,28 +51,23 @@ void analogReference(eAnalogReference ulMode)
 
 uint32_t analogRead(uint32_t ulPin)
 {
-#if defined(__M460__)
+#if 0
     volatile uint32_t ulValue = 0;  
-#if 0//def USE_BoardToPin
-    if (ulPin > BoardToPin_MAX_COUNT) return;
-	if(BoardToPinInfo[ulPin].type!=ADC_TYPE) return;
-    //if (BoardToPinInfo[ulPin].pin == -1) return;
-    ulPin = BoardToPinInfo[ulPin].num;
-#else
+
     if(ulPin>ADC_MAX_COUNT || ADC_Desc[ulPin].A==NULL) return 0;  	  
-#endif  	  	
+ 	  	
 	/* Disable the digital input path to avoid the leakage current. */
     GPIO_DISABLE_DIGITAL_PATH(GPIO_Desc[ADC_Desc[ulPin].pintype.num].P,GPIO_Desc[ADC_Desc[ulPin].pintype.num].bit);
    
     ADC_Config(ADC_Desc[ulPin]);
   
     /* Set the ADC internal sampling time, input mode as single-end and enable the A/D converter */
-#if defined(__M460__)
+
 	EADC_Open(ADC_Desc[ulPin].A, 0);
 	EADC_SetExtendSampleTime(EADC, ADC_Desc[ulPin].ch, 6);
-#else
 
-#endif
+
+
 	
 	/* Configure the sample 0 module for analog input channel 0 and enable ADINT0 trigger source */
 	EADC_ConfigSampleModule(EADC,ADC_Desc[ulPin].ch, EADC_ADINT0_TRIGGER, ADC_Desc[ulPin].ch);
@@ -102,8 +97,9 @@ uint32_t analogRead(uint32_t ulPin)
     // Close ADC
     EADC_Close(ADC_Desc[ulPin].A);
 
-#endif
-  return ulValue;	
+
+  return ulValue;
+#endif  	
 }
 
 // Right now, PWM output only works on the pins with

@@ -1,7 +1,5 @@
 
 system_M55M1.o:
-         w __sram_noncacheable_end__
-         w __sram_noncacheable_start__
 00000000 t ARM_MPU_OrderedMemcpy
          U CLK_EnableModuleClock
          U CLK_EnableXtalRC
@@ -27,9 +25,9 @@ sdh.o:
 00000000 t _SDH_Read
 00000000 t _SDH_Write
 00000000 b _SDH0_ReferenceClock
-00000000 d _SDH0_ucSDHCBuffer
+00000000 b _SDH0_ucSDHCBuffer
 00000000 b _SDH1_ReferenceClock
-00000200 d _SDH1_ucSDHCBuffer
+00000000 b _SDH1_ucSDHCBuffer
          U CLK_GetAPLL1ClockFreq
          U CLK_GetHCLK0Freq
          U CLK_GetHXTFreq
@@ -481,7 +479,7 @@ dpm.o:
          U SystemCoreClock
 
 mpc_sie_drv.o:
-00000000 t get_lut_masks.isra.0
+00000000 t get_lut_masks
 00000000 T get_sie_version
 00000000 t is_ctrl_by_range_list.isra.0
 00000000 T mpc_sie_clear_irq
@@ -604,7 +602,6 @@ startup_M55M1.o:
 00000000 W PDMA1_IRQHandler
 00000000 W PendSV_Handler
 00000000 W PMC_IRQHandler
-         U ProcessHardFault
 00000000 W PSIO_IRQHandler
 00000000 W QSPI0_IRQHandler
 00000000 W QSPI1_IRQHandler

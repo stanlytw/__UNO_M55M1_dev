@@ -39,12 +39,12 @@
 
 
 #if(UART_MAX_COUNT>0)
-ring_buffer rx_buffer= { { 0 }, 0, 0};
-HardwareSerial Serial(UART_Desc[0].U, UART_DESC_IDX0 , UART_Desc[0].clksrcsel, UART_Desc[0].clkdiv, UART_Desc[0].irq, UART_Desc[0].modulenum, &rx_buffer);//UART0
+ring_buffer rx_buffer1= { { 0 }, 0, 0};
+HardwareSerial Serial(UART_Desc[0].U, UART_DESC_IDX0 , UART_Desc[0].clksrcsel, UART_Desc[0].clkdiv, UART_Desc[0].irq, UART_Desc[0].modulenum, &rx_buffer1);//UART0
 #endif
 #if(UART_MAX_COUNT>1)
-ring_buffer rx_buffer1 = { { 0 }, 0, 0};
-HardwareSerial Serial1(UART_Desc[1].U, UART_DESC_IDX1 , UART_Desc[1].clksrcsel, UART_Desc[1].clkdiv, UART_Desc[1].irq, UART_Desc[1].modulenum, &rx_buffer1);//UART0
+ring_buffer rx_buffer2 = { { 0 }, 0, 0};
+HardwareSerial Serial1(UART_Desc[1].U, UART_DESC_IDX1 , UART_Desc[1].clksrcsel, UART_Desc[1].clkdiv, UART_Desc[1].irq, UART_Desc[1].modulenum, &rx_buffer2);//UART0
 #endif
 
 
@@ -178,19 +178,19 @@ void HardwareSerial::begin(uint32_t baud)
     /* Select IP clock source and clock divider */
     if(uart_device == UART0)
 	{
-		CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_CLKDIV0_UART0(u32ClkDiv));
+		CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_UARTDIV0_UART0DIV(u32ClkDiv));
 	}
     else if(uart_device == UART1)
 	{
-		CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_CLKDIV0_UART1(u32ClkDiv));
+		CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_UARTDIV0_UART1DIV(u32ClkDiv));
 	}
 	else if(uart_device == UART3)
 	{	
-        CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_CLKDIV4_UART3(u32ClkDiv));
+        CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_UARTDIV0_UART3DIV(u32ClkDiv));
 	}
 	else if(uart_device == UART4)
 	{	
-        CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_CLKDIV4_UART4(u32ClkDiv));
+        CLK_SetModuleClock(UART_Desc[u32Idx].module, u32ClkSrc, CLK_UARTDIV0_UART4DIV(u32ClkDiv));
 	}   
 	/* Reset IP */
     //SYS_ResetModule(UART_Desc[u32Idx].module);

@@ -16,53 +16,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#if defined(__M451__)
-  #include "M451Series.h"
-#elif defined(__NUC240__)
-  #include "NUC200Series.h"
-#elif defined(__NANO100__)
-  #include "Nano100Series.h"
-#elif defined(__NUC131__)
-  #include "NUC131.h"
-#elif defined(__NANO1X2__)
-  #include "Nano1X2Series.h"
-#elif defined(__M252__)
-  #include "M251.h"
-#elif defined(__M480__)
-  #include "M480.h"
-#elif defined(__M460__)
-  #include "m460.h"
-#elif defined(__M032KG__)
-  #include "M031Series.h"
-#elif defined(__M032BT__)
-  #include "M031Series.h"
-  #define ENABLE_C_PRINTF 1 /* enable UART0 PA0 PA1 fo C style printf in M032BT board for internal use*/
-  #define NUVOTON_BLE_ENABLE 1
-
-#if NUVOTON_BLE_ENABLE 
-  #ifdef __cplusplus
-  extern "C" {
-  #endif
-
-    #include "mcu_definition.h"
-    #include "rf_phy.h"
-    #include "porting_spi.h"
-    #include "porting_misc.h"
-    #include "mcu_definition.h"
-
-    #include "bleAppSetting.h"
-    #include "ble_cmd.h"
-    #include "ble_hci_cmd.h"
-
-    #include "ble_msgblock.h"
-
-
-    void HCI_EVENT_CALLBACK(uint8_t *pHCIbufAddr, uint16_t length);
-  #ifdef __cplusplus
-  }
-  #endif
-
-#endif //NUVOTON_BLE_ENABLE
+#if defined(__M55M1__)
+  #include "M55M1.h"
 #endif
 
 #include "Pins_arduino.h"
@@ -112,15 +67,9 @@ static volatile uint8_t init_flag=0;
 void setup(void);
 void loop(void);
 	
-#if defined(__M451__)
+#if defined(__M55M1__)
   #define USB_VID     0x0416 // nuvoton
   #define USB_PID     0x8249
-#elif defined(__NUC240__)
-  #define USB_VID            0x0416 // nuvoton
-  #define USB_PID_NUC200     0x003E
-#elif defined(__NANO100__)
-  #define USB_VID            0x0416 // nuvoton
-  #define USB_PID            0x8240
 #endif
 
 #if defined(__M460MINIMA__) 

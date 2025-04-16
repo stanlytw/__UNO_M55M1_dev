@@ -555,8 +555,9 @@ __NO_RETURN void Reset_Handler(void)
 /*----------------------------------------------------------------------------
   Hard Fault Handler
  *----------------------------------------------------------------------------*/
+#if 0
 extern void ProcessHardFault(uint32_t *pu32StackFrame);
-
+#endif
 struct StackFrame
 {
     uint32_t r0;
@@ -582,9 +583,10 @@ __WEAK void HardFault_Handler(void)
                    "mrseq %1, msp           \n"
                    "mrsne %1, psp           \n"
                    : "=r"(u32IRQ), "=r"(psStackFrame));
-
+#if 0
     // Get the instruction caused the hardfault
     ProcessHardFault((uint32_t *)psStackFrame);
+#endif    
 }
 
 /*----------------------------------------------------------------------------

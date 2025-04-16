@@ -25,18 +25,18 @@
  *****************************************************************************/
 
 #include "HardwareTimer.h"
-#if defined(__M455M1__)
+#if defined(__M55M1__)
 	#if(NR_TIMERS>0)
-		HardwareTimer Timer1(0,TMR0_MODULE,CLK_CLKSEL1_TMR0SEL_HIRC);
+		HardwareTimer Timer1(0,TMR0_MODULE,CLK_TMRSEL_TMR0SEL_HIRC);
 	#endif
 	#if(NR_TIMERS>1)
-		HardwareTimer Timer2(1,TMR1_MODULE,CLK_CLKSEL1_TMR1SEL_HIRC);
+		HardwareTimer Timer2(1,TMR1_MODULE,CLK_TMRSEL_TMR1SEL_HIRC);
 	#endif
 	#if(NR_TIMERS>2)
-		HardwareTimer Timer3(2,TMR2_MODULE,CLK_CLKSEL1_TMR2SEL_HIRC);
+		HardwareTimer Timer3(2,TMR2_MODULE,CLK_TMRSEL_TMR2SEL_HIRC);
 	#endif
 	#if(NR_TIMERS>3)
-		HardwareTimer Timer4(3,TMR3_MODULE,CLK_CLKSEL1_TMR3SEL_HIRC);
+		HardwareTimer Timer4(3,TMR3_MODULE,CLK_TMRSEL_TMR3SEL_HIRC);
 	#endif
 #endif
 
@@ -139,13 +139,13 @@ void HardwareTimer::setCompare(uint32_t val) {
 void HardwareTimer::attachInterrupt(void (*callback)(uint8_t)) {
    TimerFuncPtr[channel]=callback;
    TIMER_EnableInt(dev);
-   NVIC_EnableIRQ((IRQn_Type)((int)TMR0_IRQn+channel));
+   NVIC_EnableIRQ((IRQn_Type)((int)TIMER0_IRQn+channel));
 }
 
 void HardwareTimer::detachInterrupt() {
    TimerFuncPtr[channel]=NULL;
    TIMER_DisableInt(dev);
-   NVIC_DisableIRQ((IRQn_Type)((int)TMR0_IRQn+channel));
+   NVIC_DisableIRQ((IRQn_Type)((int)TIMER0_IRQn+channel));
 }
 
 uint32_t HardwareTimer::getModuleClock(){
