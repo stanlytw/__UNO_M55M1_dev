@@ -24,9 +24,9 @@
                   ],
                   "toolsDependencies": [
                     {
-                      "packager": "arduino",
+                      "packager": "nuvoton",
                       "name": "arm-none-eabi-gcc",
-                       "version": "7-2017q4"
+                       "version": "10-2021q3"
                     }
                   ]
                 }
