@@ -4,7 +4,7 @@
             "help": {
                 "online": "http://www.nuvoton.com"
             },
-            "maintainer": "NuvotonHLLIN6",
+            "maintainer": "Nuvoton",
             "name":"nuvoton",
             "platforms": [
                 {
