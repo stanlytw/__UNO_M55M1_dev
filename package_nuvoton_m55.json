@@ -15,8 +15,8 @@
                   "category": "Arduino",
                   "url": "https://github.com/stanlytw/__UNO_M55M1_dev/blob/master/Arduino_m55m1.tar.bz2?raw=true",
                   "archiveFileName": "Arduino_m55m1.tar.bz2",
-                  "checksum": "SHA-256:7ae44c80fdbd9cc9dadd9809ace0e281040a3d7236473a4acc92567f8321c560",
-                  "size": "38115478",
+                  "checksum": "SHA-256:185b1947cdc1cdd3c895327d282f546fa6b389cc0c4aadd20f7ebbac35e1e9bc",
+                  "size": "38115592",
                   "boards": [
                     {"name": "NuMaker-M55M1"}
                     					
