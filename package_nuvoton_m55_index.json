@@ -18,7 +18,7 @@
                   "checksum": "SHA-256:185b1947cdc1cdd3c895327d282f546fa6b389cc0c4aadd20f7ebbac35e1e9bc",
                   "size": "38115592",
                   "boards": [
-                    {"name": "NuMaker-M55M1"}
+                    {"name": "NuMaker-M55M1"},
                     					
                     						
                   ],
