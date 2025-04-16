@@ -10,13 +10,13 @@
                 {
                   "name": "UNO M55M1",
                   "architecture": "nuvoton",
-                  "version": "1.0.0",
+                  "version": "1.0.1",
 
                   "category": "Arduino",
                   "url": "https://github.com/stanlytw/__UNO_M55M1_dev/blob/master/Arduino_m55m1.tar.bz2?raw=true",
                   "archiveFileName": "Arduino_m55m1.tar.bz2",
-                  "checksum": "SHA-256:185b1947cdc1cdd3c895327d282f546fa6b389cc0c4aadd20f7ebbac35e1e9bc",
-                  "size": "38115592",
+                  "checksum": "SHA-256:1c057d24edb490c53fe57794f07b69774721bf8f29259b0a72926617bf1cfd8f",
+                  "size": "39351451",
                   "boards": [
                     {"name": "NuMaker-M55M1"}
                     
