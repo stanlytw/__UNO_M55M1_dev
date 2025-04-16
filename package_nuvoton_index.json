@@ -1,0 +1,38 @@
+{
+    "packages": [
+        {
+            "help": {
+                "online": "http://www.nuvoton.com"
+            },
+            "maintainer": "NuvotonHLLIN6",
+            "name":"nuvoton",
+            "platforms": [
+                {
+                  "name": "UNO M55M1",
+                  "architecture": "nuvoton",
+                  "version": "1.0.0",
+
+                  "category": "Arduino",
+                  "url": "https://github.com/stanlytw/__UNO_M467_dev/blob/master/Arduino_nuvoton.tar.bz2?raw=true",
+                  "archiveFileName": "Arduino_nuvoton.tar.bz2",
+                  "checksum": "SHA-256:c71b86224bda6cf501a84ca34bbcc2fee06a2906a2c299bf41af4ec08dc4ed32",
+                  "size": "33446354",
+                  "boards": [
+                    {"name": "NuMaker-M55M1"},
+                    
+                    						
+                  ],
+                  "toolsDependencies": [
+                    {
+                      "packager": "arduino",
+                      "name": "arm-none-eabi-gcc",
+                      "version": "10-2021q3"
+                    }
+                  ]
+                }
+            ],
+            "tools": [],
+            "websiteURL": "http://www.nuvoton.com"
+        }
+    ]
+}
