@@ -50,7 +50,7 @@
                   ],
                   "toolsDependencies": [
                     {
-                      "packager": "avr",
+                      "packager": "arduino",
                       "name": "arm-none-eabi-gcc",
                        "version": "7-2017q4"
                     }
