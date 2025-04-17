@@ -29,9 +29,8 @@
                        "version": "10-2021q3"
                     }
                   ]
-                }
-            ],
-			"platforms": [
+                },
+            
                 {
                   "name": "UNO M467",
                   "architecture": "m4",
