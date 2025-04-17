@@ -5,11 +5,11 @@
                 "online": "http://www.nuvoton.com"
             },
             "maintainer": "Nuvoton",
-            "name":"nuvoton_m55",
+            "name":"nuvoton",
             "platforms": [
                 {
                   "name": "UNO M55M1",
-                  "architecture": "nuvoton",
+                  "architecture": "m55",
                   "version": "1.0.1",
 
                   "category": "Arduino",
@@ -24,7 +24,7 @@
                   ],
                   "toolsDependencies": [
                     {
-                      "packager": "nuvoton_m55",
+                      "packager": "nuvoton",
                       "name": "arm-none-eabi-gcc",
                        "version": "10-2021q3"
                     }
