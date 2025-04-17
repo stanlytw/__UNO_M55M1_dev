@@ -31,6 +31,33 @@
                   ]
                 }
             ],
+			"platforms": [
+                {
+                  "name": "UNO M467",
+                  "architecture": "m4",
+                  "version": "13.3.3",
+
+                  "category": "Arduino",
+                  "url": "https://github.com/stanlytw/__UNO_M467_dev/blob/master/Arduino_nuvoton.tar.bz2?raw=true",
+                  "archiveFileName": "Arduino_nuvoton.tar.bz2",
+                  "checksum": "SHA-256:c71b86224bda6cf501a84ca34bbcc2fee06a2906a2c299bf41af4ec08dc4ed32",
+                  "size": "33446354",
+                  "boards": [
+                    {"name": "NuMaker-M467HJ"},
+                    {"name": "NuMaker-M467SJ_SD"},
+					{"name": "NuMaker-M467SJ_CAN"}
+                    
+                    						
+                  ],
+                  "toolsDependencies": [
+                    {
+                      "packager": "avr",
+                      "name": "arm-none-eabi-gcc",
+                       "version": "7-2017q4"
+                    }
+                  ]
+                }
+            ],
             "tools": [
 			{
                 "name": "arm-none-eabi-gcc",
