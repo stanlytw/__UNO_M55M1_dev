@@ -92,6 +92,13 @@ typedef struct _I2CPinDescription
     PinType pintype[2];
 } I2CPinDescription;
 
+typedef struct _LPI2CPinDescription
+{
+    LPI2C_T *I;
+    uint32_t module;
+    PinType pintype[2];
+} LPI2CPinDescription;
+
 
 typedef struct _CANFDPinDescription
 {
@@ -236,7 +243,7 @@ do { \
 
 
 /*========== I2C definition ==========*/
-#define I2C_MAX_COUNT 0
+#define I2C_MAX_COUNT 1
 
 extern I2CPinDescription I2C_Desc[];
 #define I2C_SDA 0
@@ -248,6 +255,8 @@ do { \
         outp32(GPIO_Desc[Desc.pintype[i].num].Pin.MFP,(inp32(GPIO_Desc[Desc.pintype[i].num].Pin.MFP) & ~GPIO_Desc[Desc.pintype[i].num].Pin.Mask) | Desc.pintype[i].type); \
 }while(0);
 
+
+extern LPI2CPinDescription LPI2C_Desc[];
 
 /*========== CANFD definition ==========*/
 #define CANFD_MAX_COUNT 0

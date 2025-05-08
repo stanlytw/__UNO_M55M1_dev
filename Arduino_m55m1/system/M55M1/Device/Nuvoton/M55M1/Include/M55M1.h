@@ -1667,7 +1667,7 @@ typedef volatile uint64_t vu64;   ///< Define 64-bit unsigned volatile data type
 //#include "kpi.h"
 //#include "lpadc.h"
 //#include "lpgpio.h"
-//#include "lpi2c.h"
+#include "lpi2c.h"
 //#include "lppdma.h"
 //#include "lpspi.h"
 //#include "lptmr.h"

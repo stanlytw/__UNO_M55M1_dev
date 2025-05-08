@@ -101,8 +101,8 @@ GPIOPinDescription GPIO_Desc[] =
     {PF, BIT2, {(uint32_t)  &SYS->GPF_MFP0, SYS_GPF_MFP0_PF2MFP_Msk, SYS_GPF_MFP0_PF2MFP_GPIO }}, //17
     {PC, BIT7, {(uint32_t)  &SYS->GPC_MFP1, SYS_GPC_MFP1_PC7MFP_Msk, SYS_GPC_MFP1_PC7MFP_GPIO }}, //18
     {PC, BIT6, {(uint32_t)  &SYS->GPC_MFP1, SYS_GPC_MFP1_PC6MFP_Msk, SYS_GPC_MFP1_PC6MFP_GPIO }}, //19
-    {PB, BIT12, {(uint32_t) &SYS->GPB_MFP3, SYS_GPB_MFP3_PB12MFP_Msk, SYS_GPB_MFP3_PB12MFP_GPIO }}, //20
-    {PB, BIT13, {(uint32_t) &SYS->GPB_MFP3, SYS_GPB_MFP3_PB13MFP_Msk, SYS_GPB_MFP3_PB13MFP_GPIO }}, //21
+    {PB, BIT12, {(uint32_t) &SYS->GPB_MFP3, SYS_GPB_MFP3_PB12MFP_Msk, SYS_GPB_MFP3_PB12MFP_GPIO }}, //20, just dummy
+    {PB, BIT13, {(uint32_t) &SYS->GPB_MFP3, SYS_GPB_MFP3_PB13MFP_Msk, SYS_GPB_MFP3_PB13MFP_GPIO }}, //21, just dummy
 	{NULL, 0, {0, 0, 0}}, //22, Vdd
     {NULL, 0, {0, 0, 0}}, //23, Vss
     {NULL, 0, {0, 0, 0}}, //24, LDO cap
@@ -131,8 +131,8 @@ GPIOPinDescription GPIO_Desc[] =
     {NULL, 0, {0, 0, 0}}, //47
 	{NULL, 0, {0, 0, 0}}, //48
 	{NULL, 0, {0, 0, 0}}, //49
-	{NULL, 0, {0, 0, 0}}, //50
-	{NULL, 0, {0, 0, 0}}, //51
+	{PC, BIT11, {(uint32_t) &SYS->GPC_MFP2, SYS_GPC_MFP2_PC11MFP_Msk, SYS_GPC_MFP2_PC11MFP_GPIO }}, //50, just dummy
+	{PC, BIT12, {(uint32_t) &SYS->GPC_MFP3, SYS_GPC_MFP3_PC12MFP_Msk, SYS_GPC_MFP3_PC12MFP_GPIO }}, //51, just dummy
 	    
 	{PC, BIT14, {(uint32_t) &SYS->GPC_MFP3, SYS_GPC_MFP3_PC14MFP_Msk, SYS_GPC_MFP3_PC12MFP_GPIO }}, //52
     {PB, BIT15, {(uint32_t) &SYS->GPB_MFP3, SYS_GPB_MFP3_PB15MFP_Msk, SYS_GPB_MFP3_PB15MFP_GPIO }}, //53
@@ -209,10 +209,10 @@ PinType DEPin_Desc[] =
 };
 
 
-//[2025-02-18] I2C pins updated
-I2CPinDescription I2C_Desc[] =
+//[2025-05-07] LPI2C pins updated
+LPI2CPinDescription LPI2C_Desc[] =
 {
-    //{I2C1, I2C1_MODULE, {{33 , SYS_GPF_MFP0_PF0MFP_I2C1_SCL}, {34 , SYS_GPF_MFP0_PF1MFP_I2C1_SDA }}},
+    {LPI2C0, LPI2C0_MODULE, {{51 , SYS_GPC_MFP3_PC12MFP_LPI2C0_SCL}, {50 , SYS_GPC_MFP2_PC11MFP_LPI2C0_SDA }}},
 	//{I2C2, I2C2_MODULE, {{29 , SYS_GPA_MFP0_PA1MFP_I2C2_SCL}, {30 , SYS_GPA_MFP0_PA0MFP_I2C2_SDA }}},
 };
 

@@ -1,0 +1,58 @@
+{
+  "packages": [
+    {
+      "name": "nuvoton",
+      "maintainer": "Nuvoton",
+      "websiteUrl": "http://www.nuvoton.com",
+      "Url": "https://raw.githubusercontent.com/OpenNuvoton/NuMaker_UNO/master/package_nuvoton_index.json",
+      "email": "",
+      "platforms": [
+        {
+          "name": "UNO M55M1",
+          "architecture": "m55",
+          "version": "1.0.1",
+          "deprecated": false,
+          "category": "Arduino",
+          "url": "https://github.com/stanlytw/__UNO_M55M1_dev/blob/master/Arduino_m55m1.tar.bz2?raw=true",
+          "archiveFileName": "Arduino_m55m1.tar.bz2",
+          "checksum": "SHA-256:1c057d24edb490c53fe57794f07b69774721bf8f29259b0a72926617bf1cfd8f",
+          "size": "39351451",
+          "boards": [
+            {
+              "name": "NuMaker-M55M1"
+            }
+          ],
+          "help": {},
+          "toolsDependencies": [
+            {
+              "packager": "nuvoton",
+              "name": "arm-none-eabi-gcc",
+              "version": "10-2021q3"
+            }
+          ],
+          "discoveryDependencies": [],
+          "monitorDependencies": []
+        }
+      ],
+      "tools": [
+        {
+          "name": "arm-none-eabi-gcc",
+          "version": "10-2021q3",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-win32.zip?rev=8f4a92e2ec2040f89912f372a55d8cf3\u0026hash=8A9EAF77EF1957B779C59EADDBF2DAC118170BBF",
+              "archiveFileName": "gcc-arm-none-eabi-10.3-2021.10-win32.zip",
+              "size": "200578763",
+              "checksum": "SHA-256:d287439b3090843f3f4e29c7c41f81d958a5323aecefcf705c203bfd8ae3f2e7"
+            }
+          ]
+        }
+      ],
+      "help": {
+        "online": "http://www.nuvoton.com"
+      }
+    }
+  ],
+  "IsTrusted": false
+}

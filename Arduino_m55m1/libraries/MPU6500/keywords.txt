@@ -1,0 +1,48 @@
+#######################################
+# Syntax Coloring Map For MPU6500
+#######################################
+
+#######################################
+# Class (KEYWORD1)
+#######################################
+MPU6500	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+initialize  KEYWORD2
+get_acce_resolution KEYWORD2
+get_gyro_resolution	KEYWORD2
+
+getRate KEYWORD2
+setRate KEYWORD2
+
+getFullScaleGyroRange	KEYWORD2
+setFullScaleGyroRange	KEYWORD2
+
+getFullScaleAccelRange	KEYWORD2
+setFullScaleAccelRange	KEYWORD2
+
+
+getAccelerationX    KEYWORD2
+getAccelerationY    KEYWORD2
+getAccelerationZ    KEYWORD2
+
+getTemperature  KEYWORD2
+
+getRotation     KEYWORD2
+getRotationX    KEYWORD2
+getRotationY    KEYWORD2
+getRotationZ    KEYWORD2
+
+
+CalibrateGyro   KEYWORD2
+CalibrateAccel  KEYWORD2
+PID KEYWORD2
+PrintActiveOffsets  KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
