@@ -153,6 +153,10 @@ extern GPIOPinDescription GPIO_Desc[];
 #define PWM_DESC_IDX0             (0x00)
 #define PWM_DESC_IDX1             (0x01)
 #define PWM_DESC_IDX2             (0x02)
+#define PWM_DESC_IDX3             (0x03)
+#define PWM_DESC_IDX4             (0x04)
+#define PWM_DESC_IDX5             (0x05)
+#define PWM_DESC_MAX              (PWM_DESC_IDX5+1)//[2025-06-06]For error handling
 #define PWM_DESC_IDX_NOUSE        (0xF0)
 
 extern EPWMPinDescription PWM_Desc[];
@@ -182,7 +186,7 @@ extern EPWMPinDescription PWM_Desc[];
 #define ADC_DESC_IDX3             (0x03)
 #define ADC_DESC_IDX4             (0x04)
 #define ADC_DESC_IDX5             (0x05)
-
+#define ADC_DESC_MAX              (ADC_DESC_IDX5+1)//[2025-06-06]For error handling
 
 
 extern ADCPinDescription ADC_Desc[];
